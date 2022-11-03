@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+section{
+  display: flex;
+  border: 1px solid grey;
+  padding: 2%;
+}
+.cover {
+  width: 200px;
+}
