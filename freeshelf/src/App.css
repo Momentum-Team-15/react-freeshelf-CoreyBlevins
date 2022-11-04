@@ -1,14 +1,24 @@
 * {
   box-sizing: border-box;
 }
-.bookBox {
+html {
+  background: silver;
+  height: 100%;
+}
+.book-box {
   border: 1px solid grey;
+  background: white;
   display: flex;
   width: 70%;
   margin: 10px auto;
   padding: 10px;
 }
 .cover {
+  margin-left: 15px;
   height: 300px;
   width: 200px;
+}
+.description-box {
+  border: 1px solid grey;
+  padding: 15px;
 }
