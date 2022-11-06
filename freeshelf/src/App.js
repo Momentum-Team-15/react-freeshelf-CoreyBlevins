@@ -16,28 +16,29 @@ const App = ({ bookData }) => {
             date={book.publicationDate}
             details={book.detailedDescription}/>
           </div>
-          <div className="img-box">
-          <img src={book.coverImageUrl} className="cover" alt="book cover" />
-          </div>
+            <img src={book.coverImageUrl} className="cover" alt="book cover" />
         </div>
       ))}
     </section>
   )};
 
+
 const Description = ({url, publisher, date, details}) => {
   const [display, setDisplay] = useState(false)
-  const handleClick = (event) => {setDisplay(!display)}
+  const handleClick = (event) => {setDisplay(!display)} 
   return (
-    <div>
-    <button onClick={handleClick}>{display ? 'Less' : 'More'} Info</button>
+    <>
+    <button onClick={handleClick} 
+      type="button" aria-controls="det" aria-expanded={display ? "true" : "false"}>
+      <strong>{display ? 'Less' : 'More'} Info</strong></button>
     {display && 
-    <div className="description-box">
-      Link: <a href={url}>{url}</a>
-      <p>{details}</p>
-      <p>Publisher: {publisher ? <>{publisher}</> : "--"} / 
-      Publication Date: {date ? <>{date}</> : "--"}</p>
+    <div id="det" className="description-box">
+      <strong>Link:</strong> <a href={url}>{url}</a>
+      <p><strong>Full Description:</strong><br/>{details}</p>
+      <p><strong>Publisher:</strong> {publisher ? <>{publisher}</> : "--"} / <strong>
+        Publication Date:</strong> {date ? <>{date}</> : "--"}</p>
     </div>}
-    </div>
+    </>
 )};
 
 export default App

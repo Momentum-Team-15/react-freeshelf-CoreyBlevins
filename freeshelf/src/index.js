@@ -8,6 +8,5 @@ import data from './bookdata.json';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App bookData={data.data}/>
-  </React.StrictMode>
-);
+    <App bookData={data.books}/>
+  </React.StrictMode>);

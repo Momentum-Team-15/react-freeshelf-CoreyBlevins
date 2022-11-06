@@ -9,16 +9,21 @@ html {
   border: 1px solid grey;
   background: white;
   display: flex;
+  justify-content: space-between;
   width: 70%;
   margin: 10px auto;
   padding: 10px;
 }
 .cover {
+  border: 1px solid grey;
   margin-left: 15px;
   height: 300px;
   width: 200px;
 }
+button:hover{
+  cursor: pointer;
+}
 .description-box {
   border: 1px solid grey;
-  padding: 15px;
+  padding: 20px;
 }
